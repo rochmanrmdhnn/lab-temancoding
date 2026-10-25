@@ -1,6 +1,6 @@
 services:
   app:
-    image: ghcr.io/rochmanramadhani/lab-temancoding:latest
+    image: ghcr.io/rochmanrmdhnn/lab-temancoding:latest
     container_name: lab-app
     restart: unless-stopped
     pull_policy: always

@@ -14,7 +14,7 @@
 #   bash bootstrap.sh my-cool-app myapp --push    # also create+push GH repo
 #
 # Configurable via env (defaults are mine — change for your setup):
-#   GH_OWNER         GitHub user/org for the new repo (default: rochmanramadhani)
+#   GH_OWNER         GitHub user/org for the new repo (default: rochmanrmdhnn)
 #   BASE_DOMAIN      apex domain on Cloudflare         (default: temancoding.my.id)
 #   ZONE_ID          CF zone id for $BASE_DOMAIN
 #   ACCOUNT_ID       CF account id that owns the zone
@@ -35,7 +35,7 @@ PROJECT="$1"
 SUB="$2"
 PUSH="${3:-}"
 
-GH_OWNER="${GH_OWNER:-rochmanramadhani}"
+GH_OWNER="${GH_OWNER:-rochmanrmdhnn}"
 BASE_DOMAIN="${BASE_DOMAIN:-temancoding.my.id}"
 ZONE_ID="${ZONE_ID:-347bfa5a279b0782fc6dcb81a98445cc}"
 ACCOUNT_ID="${ACCOUNT_ID:-4ab8537135f8d0edf826345ccac3e90f}"
@@ -75,7 +75,7 @@ echo "==> [1/5] Rename project to '$PROJECT'"
 # We anchor on the literal template strings so re-running on an already-bootstrapped
 # project is a no-op rather than a mistaken double-rename.
 sed -i.bak "s|\"name\": \"lab-temancoding\"|\"name\": \"$PROJECT\"|" package.json
-sed -i.bak "s|ghcr.io/rochmanramadhani/lab-temancoding|ghcr.io/$GH_OWNER/$PROJECT|g" compose.yaml
+sed -i.bak "s|ghcr.io/rochmanrmdhnn/lab-temancoding|ghcr.io/$GH_OWNER/$PROJECT|g" compose.yaml
 rm -f package.json.bak compose.yaml.bak
 
 echo "==> [2/5] Create Cloudflare Tunnel '$PROJECT'"

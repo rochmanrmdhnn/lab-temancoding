@@ -1,8 +1,8 @@
 # lab-temancoding
 
-[![ci](https://github.com/rochmanramadhani/lab-temancoding/actions/workflows/ci.yml/badge.svg)](https://github.com/rochmanramadhani/lab-temancoding/actions/workflows/ci.yml)
+[![ci](https://github.com/rochmanrmdhnn/lab-temancoding/actions/workflows/ci.yml/badge.svg)](https://github.com/rochmanrmdhnn/lab-temancoding/actions/workflows/ci.yml)
 [![live](https://img.shields.io/website?url=https%3A%2F%2Flab.temancoding.my.id&label=lab.temancoding.my.id&up_message=up&down_message=down)](https://lab.temancoding.my.id)
-[![license](https://img.shields.io/github/license/rochmanramadhani/lab-temancoding)](./LICENSE)
+[![license](https://img.shields.io/github/license/rochmanrmdhnn/lab-temancoding)](./LICENSE)
 [![node](https://img.shields.io/badge/node-22%20%7C%2024-339933?logo=node.js&logoColor=white)](./Dockerfile)
 
 Personal lab/playground app — served at <https://lab.temancoding.my.id> via Cloudflare Tunnel.
@@ -76,7 +76,7 @@ Prerequisites on your laptop:
 
 ```sh
 # 1. Fork or clone this repo, then enter it
-gh repo clone rochmanramadhani/lab-temancoding my-cool-app
+gh repo clone rochmanrmdhnn/lab-temancoding my-cool-app
 cd my-cool-app
 
 # 2. Provision a tunnel + DNS + .env
@@ -84,7 +84,7 @@ bash bootstrap.sh my-cool-app myapp           # myapp.temancoding.my.id
 bash bootstrap.sh my-cool-app myapp --push    # also creates GH repo + pushes
 
 # 3. On the host, clone the new repo + start
-ssh omans 'git clone https://github.com/rochmanramadhani/my-cool-app.git /root/my-cool-app'
+ssh omans 'git clone https://github.com/rochmanrmdhnn/my-cool-app.git /root/my-cool-app'
 scp .env omans:/root/my-cool-app/.env
 ssh omans 'cd /root/my-cool-app && docker compose up -d && sudo bash deploy/install.sh'
 ```
